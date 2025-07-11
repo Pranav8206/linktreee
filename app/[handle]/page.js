@@ -18,13 +18,13 @@ export default async function Page({ params }) {
     }    
 
     return <>
-        <div className="flex p-10 min-h-screen flex-col bg-[#e9c0e9] text-[#502274] items-center">
+        <div className="flex p-10  flex-col bg-[#e9c0e9] text-[#502274] items-center">
             <div className='  w-full'>
                 <Link href="/" >
                     <Image className='cursor-pointer w-20 md:w-25 ' src="/logo2.svg" width={120} height={60} alt='logo' />
                 </Link>
             </div>
-            <div className="shadow bg-[#e9c0da] rounded-xl mx-auto my-4 flex flex-col justify-center items-center p-1">
+            <div className="shadow bg-[#e9c0da] mt-7 rounded-xl w-[70vw] sm:w-[50vw] md:w-[28rem] mx-auto my-4 flex flex-col justify-center items-center p-1">
                 <img className="rounded-full size-32 object-cover" src={item.pic} alt="photo" />
                 <div className="font-bold text-2xl ">@{item.handle}</div>
                 <div className="text-center mb-4 sm:max-w-140 px-4">{item.desc}</div>

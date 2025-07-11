@@ -9,14 +9,14 @@ const Footer = () => {
             <hr className='    w-30 text-center container mx-auto' />
             <ul className='flex font-semibold gap-8 justify-center '>
                 <Link  href="/search">
-                    <li className="cursor-pointer hover:text-gray-400">Search</li>
+                    <li className="cursor-pointer hover:text-gray-900">Search</li>
                 </Link>
                 <Link  href="/">
-                    <li className="cursor-pointer hover:text-gray-400">Home</li>
+                    <li className="cursor-pointer hover:text-gray-900">Home</li>
                 </Link>
                 
                 <Link  href="mailto:pranavmavle8206@gmail.com">
-                    <li className="cursor-pointer hover:text-gray-400">Contact</li>
+                    <li className="cursor-pointer hover:text-gray-900">Contact</li>
                 </Link>
             </ul>
             <hr className='text-black w-30 text-center container mx-auto' />

@@ -30,7 +30,7 @@ const HandleSearchPage = () => {
       if (result.success) {
         router.push(`/${handle.trim().toLowerCase()}`);
       } else {
-        setError('This handle does not exist.');
+        setError('Handle does not exist.');
       }
     } catch (err) {
       setError('Something went wrong. Please try again.');
@@ -71,7 +71,7 @@ const HandleSearchPage = () => {
         }
         <button
           onClick={checkHandleAndRedirect}
-          className="w-full cursor-pointer bg-[#ad76ad] text-white py-2 rounded-md font-bold hover:bg-[#c48dc4] transition"
+          className="w-full cursor-pointer bg-[#ad76ad] text-white py-2 rounded-md font-bold hover:bg-[#c48dc4] transition" type='button'
         >
           Go to Linktree
         </button>

@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState, useRef } from 'react'
 import { useRouter } from 'next/navigation'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Bounce } from 'react-toastify';
 
 const Page = () => {
   const router = useRouter()
@@ -35,12 +38,10 @@ const Page = () => {
         redirect: "follow"
       };
 
-      fetch(`${process.env.NEXT_PUBLIC_HOST}/api/add`, requestOptions)
+      fetch(`${process.env.NEXT_PUBLIC_HOST}/api/saveEmail`, requestOptions)
         .then((response) => response.text())
         .then((result) => console.log(result))
         .catch((error) => console.error(error));
-
-
 
       router.push("/generate");
     }
@@ -48,9 +49,22 @@ const Page = () => {
 
   return (
     <div>
-      <section className='flex p-10 md:flex-row bg-[#e9c0e9] text-[#502274]' >
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
+      <section className='flex  md:flex-row bg-[#e9c0e9] text-[#502274]' >
         {/* left */}
-        <div className=' md:w-1/2 w-full'>
+        <div className='p-10 md:w-1/2 w-full'>
           <Link href="/" >
             <Image className='cursor-pointer w-20 md:w-25 ' src="/logo2.svg" width={120} height={60} alt='logo' />
           </Link>
@@ -58,7 +72,7 @@ const Page = () => {
             <h1 className='text-3xl font-bold md:text-4xl md:font-extrabold'>Join Linktree</h1>
             <p className='text-gray-600 text-sm pb-10'>Sign up for free!</p>
 
-            <form onSubmit={(e) => openGenerate(email, e)}  className="relative  flex flex-col items-center mx-5">
+            <form onSubmit={(e) => openGenerate(email, e)} className="relative  flex flex-col items-center mx-5">
               <input ref={inputRef} id="name" value={email} onChange={(e) => {
                 setEmail(e.target.value);
                 if (emailError) {
@@ -78,7 +92,7 @@ const Page = () => {
                 <p className="text-red-500 text-xs self-start ml-2">{emailError}</p>
               )}
 
-              <button type='submit'  className=' mt-5 p-2 px-3 bg-gray-300 rounded-full text-base cursor-pointer font-semibold hover:shadow-sm'>Create account</button>
+              <button type='submit' className=' mt-5 p-2 px-3 bg-gray-300 rounded-full text-base cursor-pointer font-semibold hover:shadow-sm'>Create account</button>
             </form>
 
             <div className='text-center break-words mx-10  text-gray-600 text-sm'>By clicking <span className='font-semibold'>Create account,</span> you agree to Linktree's <span className='underline'>privacy notice, T&Cs</span>  and to receive offers, news and updates.</div>
