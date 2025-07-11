@@ -125,7 +125,7 @@ const Generate = () => {
 
 
         <div className="col2 hidden sm:flex items-center justify-center w-full h-screen bg-[#E9C0E9]">
-          <img className='h-full object-contain' src="/generate.png" alt="Generate your links" />
+          <Image className='h-full object-contain' src="/generate.png" alt="Generate your links" />
 
         </div>
       </div>

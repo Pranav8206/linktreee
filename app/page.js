@@ -46,7 +46,7 @@ export default function Home() {
       </div>
     </div>
     <div className="w-full flex sm:min-w-[40vw] md:min-w-[50vw] justify-center">
-      <img className="h-[50vh] sm:h-[90vh] w-fit" src="/image.png" alt="image" />
+      <Image className="h-[50vh] sm:h-[90vh] w-fit" src="/image.png" alt="image" />
     </div>
   </section>
 
@@ -70,7 +70,7 @@ export default function Home() {
       </div>
     </div>
     <div className="w-full flex sm:min-w-[40vw] md:min-w-[50vw] justify-center">
-      <img className="h-[50vh] sm:h-[90vh] w-fit" src="/image2.png" alt="image"/>
+      <Image className="h-[50vh] sm:h-[90vh] w-fit" src="/image2.png" alt="image"/>
     </div>
   </section>
 

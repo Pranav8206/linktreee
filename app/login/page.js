@@ -95,7 +95,7 @@ const Page = () => {
               <button type='submit' className=' mt-5 p-2 px-3 bg-gray-300 rounded-full text-base cursor-pointer font-semibold hover:shadow-sm'>Create account</button>
             </form>
 
-            <div className='text-center break-words mx-10  text-gray-600 text-sm'>By clicking <span className='font-semibold'>Create account,</span> you agree to Linktree's <span className='underline'>privacy notice, T&Cs</span>  and to receive offers, news and updates.</div>
+            <div className='text-center break-words mx-10  text-gray-600 text-sm'>By clicking <span className='font-semibold'>Create account,</span> you agree to Linktree&apos;s <span className='underline'>privacy notice, T&Cs</span>  and to receive offers, news and updates.</div>
             <div className='hidden  flex-col items-center gap-4'>
               <h2>OR</h2>
               <button>Sign in with google</button>
